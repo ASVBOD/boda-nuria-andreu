@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Núria & Andreu — 29.08.2026</title>
+<meta name="description" content="Núria & Andreu nos casamos el 29 de agosto de 2026 en Hort de Ribera, Carcaixent. ¡Confirma tu asistencia!">
+<meta property="og:title" content="💍 Núria & Andreu — 29.08.2026">
+<meta property="og:description" content="Nos casamos el 29 de agosto de 2026 en Hort de Ribera, Carcaixent (Valencia). Entra para ver el programa y confirmar tu asistencia 🥂">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://asvbod.github.io/boda-nuria-andreu/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="💍 Núria & Andreu — 29.08.2026">
+<meta name="twitter:description" content="Nos casamos el 29 de agosto de 2026 en Hort de Ribera, Carcaixent. ¡Confirma tu asistencia!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#e8dcc8;--sand-dark:#d4c4a8;--clay:#c4714a;--clay-dark:#a85a36;
+    --moss:#4a6741;--moss-dark:#354d2e;--cream:#f5f0e6;--ink:#1e2a1a;--warm-white:#faf7f2;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;font-weight:300;color:var(--ink);background:var(--cream);overflow-x:hidden;}
+  h1,h2,h3{font-family:'Playfair Display',serif;}
+  em{font-style:italic;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--clay);color:var(--cream);}
+  #prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--clay);z-index:300;}
+  .lang-bar{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;gap:4px;background:var(--ink);border-radius:999px;padding:5px;}
+  .lang-bar button{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:2px;background:none;border:none;color:rgba(245,240,230,.5);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.25s;text-transform:uppercase;}
+  .lang-bar button.active{background:var(--clay);color:var(--cream);}
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;transition:background .4s;}
+  nav.solid{background:rgba(245,240,230,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--sand-dark);}
+  .nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--moss-dark);letter-spacing:2px;}
+  .nav-links{display:flex;gap:32px;}
+  .nav-links a{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink);opacity:.7;transition:.2s;}
+  .nav-links a:hover{opacity:1;color:var(--clay);}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+  .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.3s;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(3.5px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-3.5px) rotate(-45deg);}
+  @media(max-width:860px){
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;border-bottom:1px solid var(--sand-dark);}
+    .nav-links.open{display:flex;} .nav-links a{padding:16px 40px;border-top:1px solid var(--sand);}
+    .nav-toggle{display:flex;}
+  }
+  #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+  .hero-left{background:var(--moss-dark);display:flex;flex-direction:column;justify-content:flex-end;padding:80px 56px;position:relative;overflow:hidden;}
+  .hero-left::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,rgba(196,113,74,.25),transparent 60%);}
+  .hero-tag{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(245,240,230,.5);margin-bottom:24px;}
+  .hero-names{font-family:'Playfair Display',serif;font-size:clamp(52px,7vw,96px);line-height:.95;color:var(--cream);font-weight:400;}
+  .hero-names span{display:block;}
+  .hero-names .amp{font-style:italic;color:var(--clay);font-size:.7em;padding:8px 0;}
+  .hero-date{margin-top:48px;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:rgba(245,240,230,.6);}
+  .hero-date b{display:block;font-family:'Playfair Display',serif;font-size:28px;letter-spacing:2px;color:var(--cream);margin-top:6px;font-weight:400;}
+  .hero-right{background:var(--sand);display:flex;flex-direction:column;justify-content:center;padding:80px 56px;}
+  .countdown-label{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--clay);margin-bottom:32px;}
+  .cd-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:340px;}
+  .cd-box{background:var(--warm-white);padding:24px 20px;}
+  .cd-box b{font-family:'Playfair Display',serif;font-size:48px;color:var(--moss-dark);display:block;line-height:1;}
+  .cd-box small{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--ink);opacity:.5;margin-top:4px;display:block;}
+  .hero-location{margin-top:48px;}
+  .hero-location p{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--ink);opacity:.5;margin-bottom:8px;}
+  .hero-location strong{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--moss-dark);}
+  @media(max-width:760px){#hero{grid-template-columns:1fr;}.hero-left{padding:120px 32px 60px;}.hero-right{padding:60px 32px;}}
+
+  #historia{display:grid;grid-template-columns:5fr 4fr;min-height:80vh;}
+  .hist-text{background:var(--cream);padding:120px 80px;display:flex;flex-direction:column;justify-content:center;}
+  .hist-aside{background:var(--moss);display:flex;flex-direction:column;justify-content:center;padding:80px 56px;position:relative;overflow:hidden;}
+  .hist-aside::before{content:'29';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:280px;color:rgba(255,255,255,.04);line-height:1;pointer-events:none;}
+  .hist-aside blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.6;color:var(--cream);}
+  .hist-aside cite{display:block;margin-top:20px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(245,240,230,.4);font-style:normal;}
+  @media(max-width:860px){#historia{grid-template-columns:1fr;}.hist-text{padding:80px 32px;}.hist-aside{padding:60px 32px;}}
+
+  #programa{background:var(--sand);padding:120px 0;}
+  .prog-inner{max-width:1100px;margin:0 auto;padding:0 40px;}
+  .prog-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:80px;align-items:end;}
+  .prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+  .prog-card{background:var(--warm-white);padding:40px;position:relative;overflow:hidden;transition:background .3s;}
+  .prog-card:hover{background:var(--moss-dark);}
+  .prog-card:hover .pc-time,.prog-card:hover .pc-title,.prog-card:hover .pc-desc{color:var(--cream);}
+  .prog-card:hover .pc-num{color:rgba(255,255,255,.04);}
+  .pc-num{position:absolute;top:-20px;right:20px;font-family:'Playfair Display',serif;font-size:120px;color:var(--sand);line-height:1;pointer-events:none;transition:color .3s;}
+  .pc-time{font-family:'Playfair Display',serif;font-style:italic;font-size:36px;color:var(--clay);margin-bottom:12px;position:relative;transition:color .3s;}
+  .pc-title{font-size:18px;font-weight:500;margin-bottom:8px;position:relative;transition:color .3s;}
+  .pc-desc{font-size:13px;opacity:.7;max-width:340px;position:relative;transition:color .3s;}
+  @media(max-width:860px){.prog-header{grid-template-columns:1fr;gap:24px;}.prog-grid{grid-template-columns:1fr;}.prog-inner{padding:0 24px;}}
+
+  #rsvp-section{display:grid;grid-template-columns:2fr 3fr;}
+  .rsvp-left{background:var(--clay);padding:120px 80px;display:flex;flex-direction:column;justify-content:center;}
+  .rsvp-left h2{color:var(--cream);font-size:clamp(36px,4vw,64px);line-height:1.1;margin-bottom:24px;}
+  .rsvp-left p{color:rgba(245,240,230,.8);font-size:16px;max-width:320px;}
+  .rsvp-right{background:var(--warm-white);padding:120px 80px;}
+  .rsvp-form{display:flex;flex-direction:column;gap:32px;}
+  .field{display:flex;flex-direction:column;gap:10px;}
+  .field label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--moss-dark);font-weight:400;}
+  .field input,.field select,.field textarea{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;background:transparent;border:none;border-bottom:1.5px solid var(--sand-dark);padding:10px 0;color:var(--ink);outline:none;transition:.3s;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--clay);}
+  .field textarea{resize:vertical;min-height:80px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media(max-width:540px){.row2{grid-template-columns:1fr;}}
+  .pill-group{display:flex;gap:12px;flex-wrap:wrap;}
+  .pill-group label{display:flex;align-items:center;gap:8px;font-size:13px;border:1.5px solid var(--sand-dark);padding:10px 20px;border-radius:999px;cursor:pointer;transition:.25s;letter-spacing:.3px;text-transform:none;}
+  .pill-group input{width:auto;accent-color:var(--clay);}
+  .pill-group label:hover{border-color:var(--clay);color:var(--clay);}
+  .submit-btn{align-self:flex-start;background:var(--moss-dark);color:var(--cream);border:none;padding:18px 44px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:.3s;border-radius:2px;}
+  .submit-btn:hover{background:var(--clay);}
+  .submit-btn:disabled{opacity:.5;cursor:default;}
+  #rsvp-status{font-size:14px;display:none;}
+  #rsvp-status.show{display:block;}
+  #rsvp-status.ok{color:var(--moss-dark);}
+  #rsvp-status.err{color:#a14;}
+  @media(max-width:860px){#rsvp-section{grid-template-columns:1fr;}.rsvp-left,.rsvp-right{padding:80px 32px;}}
+
+  .list-sec{padding:120px 0;}
+  .list-sec.alt{background:var(--moss-dark);}
+  .list-sec.alt .sec-label{color:var(--clay);}
+  .list-sec.alt h2{color:var(--cream);}
+  .list-sec.alt .ls-lead,.list-sec.alt .ls-desc{color:rgba(245,240,230,.7);}
+  .list-sec.alt .ls-title{color:var(--cream);}
+  .list-sec.alt .ls-row{border-top-color:rgba(245,240,230,.12);}
+  .list-sec.alt .ls-row:last-child{border-bottom-color:rgba(245,240,230,.12);}
+  .list-sec.alt .ls-link{border-color:rgba(245,240,230,.3);color:var(--cream);}
+  .list-inner{max-width:1100px;margin:0 auto;padding:0 40px;}
+  .ls-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:64px;align-items:end;}
+  .ls-lead{font-size:16px;opacity:.7;max-width:380px;}
+  .ls-row{display:grid;grid-template-columns:180px 1fr auto;gap:32px;align-items:center;padding:28px 0;border-top:1.5px solid var(--sand-dark);}
+  .ls-row:last-child{border-bottom:1.5px solid var(--sand-dark);}
+  .ls-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--clay);}
+  .ls-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;margin-bottom:4px;}
+  .ls-desc{font-size:13px;opacity:.7;max-width:400px;}
+  .ls-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;border:1.5px solid var(--sand-dark);padding:10px 18px;border-radius:999px;white-space:nowrap;transition:.25s;color:var(--ink);}
+  .ls-link:hover{background:var(--clay);border-color:var(--clay);color:var(--cream);}
+  @media(max-width:860px){.ls-header{grid-template-columns:1fr;gap:20px;}.ls-row{grid-template-columns:1fr;gap:12px;}.list-inner{padding:0 24px;}.list-sec{padding:80px 0;}}
+
+  #faq{background:var(--sand);padding:120px 0;}
+  .faq-inner{max-width:900px;margin:0 auto;padding:0 40px;}
+  .faq-header{margin-bottom:64px;}
+  .faq-item{border-top:1.5px solid var(--sand-dark);}
+  .faq-item:last-child{border-bottom:1.5px solid var(--sand-dark);}
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;display:grid;grid-template-columns:48px 1fr 24px;align-items:center;gap:20px;padding:24px 0;color:var(--ink);}
+  .fq-idx{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--clay);}
+  .fq-txt{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;}
+  .fq-plus{font-size:20px;color:var(--clay);transition:transform .3s;}
+  .faq-item.open .fq-plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-a p{font-size:14px;opacity:.75;padding:0 0 24px 68px;max-width:540px;}
+  .faq-item.open .faq-a{max-height:320px;}
+  @media(max-width:600px){.faq-inner{padding:0 24px;}.faq-q{grid-template-columns:36px 1fr 20px;}}
+
+  footer{background:var(--ink);color:var(--cream);padding:120px 40px 60px;text-align:center;}
+  footer h2{font-size:clamp(40px,8vw,100px);font-style:italic;font-weight:400;margin-bottom:48px;}
+  .gift-box{display:inline-block;border:1px solid rgba(245,240,230,.2);padding:28px 48px;font-size:14px;letter-spacing:.5px;margin-bottom:64px;}
+  .gift-box b{display:block;font-family:'Playfair Display',serif;font-size:20px;letter-spacing:2px;margin-bottom:10px;color:var(--sand);}
+  .footer-note{font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.35;}
+
+  .sec-label{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--clay);margin-bottom:16px;display:block;}
+  /* ===== PARALLAX / SMOOTH SCROLL ===== */
+  html{scroll-behavior:auto;} /* override, JS handles it */
+  body{overflow:hidden;height:100vh;}
+  #scroll-container{
+    height:100vh;overflow-y:scroll;overflow-x:hidden;
+    scroll-snap-type:y mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+  .snap-section{
+    scroll-snap-align:start;scroll-snap-stop:always;
+    min-height:100vh;position:relative;
+  }
+  /* parallax bg layers */
+  .parallax-bg{
+    position:absolute;inset:0;will-change:transform;
+    transition:transform .1s linear;pointer-events:none;z-index:0;
+  }
+  .snap-section > *:not(.parallax-bg){position:relative;z-index:1;}
+  /* fade-in on snap */
+  .snap-section .snap-content{
+    opacity:0;transform:translateY(20px);
+    transition:opacity .7s ease .2s, transform .7s ease .2s;
+  }
+  .snap-section.in-view .snap-content{opacity:1;transform:translateY(0);}
+  /* section-specific heights */
+  #hero{min-height:100vh;}
+  #historia{min-height:100vh;}
+  #programa{min-height:100vh;}
+  #rsvp-section{min-height:100vh;}
+  #faq{min-height:100vh;}
+  footer{min-height:50vh;scroll-snap-align:start;}
+  /* nav links smooth */
+  .nav-links a{cursor:pointer;}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="lang-bar">
+  <button data-lang="es" class="active">ES</button>
+  <button data-lang="va">VA</button>
+</div>
+<nav id="navbar">
+  <div class="nav-logo">N &amp; A</div>
+  <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="#historia" data-va="Història">Historia</a>
+    <a href="#programa" data-va="Programa">Programa</a>
+    <a href="#rsvp-section" data-va="Confirmar">Confirmar</a>
+
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<div id="scroll-container">
+
+<section id="hero" class="snap-section">
+  <div class="hero-left">
+    <p class="hero-tag" data-va="Vos convidem a la nostra boda">Os invitamos a nuestra boda</p>
+    <h1 class="hero-names"><span>Núria</span><span class="amp">&amp;</span><span>Andreu</span></h1>
+    <div class="hero-date"><span data-va="Data">Fecha</span><b>29 · 08 · 2026</b></div>
+  </div>
+  <div class="hero-right">
+    <p class="countdown-label" data-va="Compte enrere">Cuenta atrás</p>
+    <div class="cd-grid">
+      <div class="cd-box"><b id="cd-days">000</b><small data-va="dies">días</small></div>
+      <div class="cd-box"><b id="cd-hours">00</b><small data-va="hores">horas</small></div>
+      <div class="cd-box"><b id="cd-mins">00</b><small>min</small></div>
+      <div class="cd-box"><b id="cd-secs">00</b><small>seg</small></div>
+    </div>
+    <div class="hero-location">
+      <p data-va="Lloc">Lugar</p>
+      <a href="https://share.google/SguCQzcYO2FXxjUaX" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;">
+        <strong>Hort de Ribera, Carcaixent</strong>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--clay)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      </a>
+      <p style="font-size:11px;letter-spacing:1.5px;opacity:.45;margin-top:6px;" data-va="Obrir en Google Maps">Ver en Google Maps ↗</p>
+    </div>
+  </div>
+</section>
+
+<section id="historia" class="snap-section reveal">
+  <div class="hist-text">
+    <span class="sec-label" data-va="La nostra història">Nuestra historia</span>
+    <h2 style="font-size:clamp(32px,4vw,56px);line-height:1.15;margin-bottom:28px;" data-va="Del <em>29 d'octubre</em><br>al 29 d'agost">Del <em>29 de octubre</em><br>al 29 de agosto</h2>
+    <p style="font-size:17px;line-height:1.8;opacity:.8;max-width:480px;" data-va="Un 29 d'octubre de 2003 vam començar, sense saber molt bé on ens portaria. Des d'aleshores hem compartit moments que no canviaríem per res — els bons, els menys bons, i unes quantes maletes de més. Vint-i-tres anys després, el 29 d'agost de 2026 ens casem. Ja era hora, sí.">
+      Un 29 de octubre de 2003 empezamos, sin saber muy bien a dónde nos llevaría. Desde entonces hemos compartido momentos que no cambiaríamos por nada — los buenos, los menos buenos, y unas cuantas maletas de más. Veintitrés años después, el 29 de agosto de 2026 nos casamos. Ya era hora, sí.
+    </p>
+  </div>
+  <div class="hist-aside">
+    <blockquote data-va="«Vint-i-tres anys, unes quantes maletes i un 29 de per mitjà.»">"Veintitrés años, unas cuantas maletas y un 29 de por medio."</blockquote>
+    <cite data-va="Núria &amp; Andreu · 2026">Núria &amp; Andreu · 2026</cite>
+  </div>
+</section>
+
+<section id="programa" class="snap-section reveal">
+  <div class="prog-inner">
+    <div class="prog-header">
+      <div>
+        <span class="sec-label" data-va="29 d'agost · El gran dia">29 de agosto · El gran día</span>
+        <h2 style="font-size:clamp(36px,5vw,64px);line-height:1.1;" data-va="Programa de<br>la <em>celebració</em>">Programa de<br>la <em>celebración</em></h2>
+      </div>
+      <p style="font-size:16px;opacity:.7;max-width:380px;" data-va="Tot tindrà lloc a Hort de Ribera, Carcaixent (València).">Todo tendrá lugar en Hort de Ribera, Carcaixent (Valencia).</p>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card"><div class="pc-num">1</div><div class="pc-time">12:00</div><div class="pc-title" data-va="💍 Cerimònia">💍 Ceremonia</div><div class="pc-desc" data-va="Als jardins de Hort de Ribera. El moment de dir «sí, vull».">En los jardines de Hort de Ribera. El momento de decir "sí quiero".</div></div>
+      <div class="prog-card"><div class="pc-num">2</div><div class="pc-time">13:00</div><div class="pc-title" data-va="🥂 Còctel">🥂 Cóctel de bienvenida</div><div class="pc-desc" data-va="Còctels i aperitius a l'aire lliure.">Cócteles y aperitivos al aire libre.</div></div>
+      <div class="prog-card"><div class="pc-num">3</div><div class="pc-time">15:00</div><div class="pc-title" data-va="🥘 Banquet">🥘 Banquete</div><div class="pc-desc" data-va="Amb els millors productes de l'horta valenciana.">Con los mejores productos de la huerta valenciana.</div></div>
+      <div class="prog-card"><div class="pc-num">4</div><div class="pc-time">17:30</div><div class="pc-title" data-va="🏊🎶 Piscina, festa i barra lliure">🏊🎶 Piscina, fiesta y barra libre</div><div class="pc-desc" data-va="Refresqueu-vos a la piscina i continueu la festa amb música i barra lliure.">Refrescaos en la piscina y continuad la fiesta con música y barra libre.</div></div>
+      <div class="prog-card"><div class="pc-num">5</div><div class="pc-time">20:30</div><div class="pc-title" data-va="🍖 Resopó amb barbacoa">🍖 Resopón con barbacoa</div><div class="pc-desc" data-va="Per a reposar forces després del ball, un resopó amb barbacoa per a tancar el dia.">Para reponer fuerzas después del baile, un resopón con barbacoa para cerrar el día.</div></div>
+    </div>
+    <p style="margin-top:32px;font-size:12px;font-style:italic;opacity:.5;" data-va="⏰ Horaris orientatius.">⏰ Horarios orientativos.</p>
+  </div>
+</section>
+
+<section id="rsvp-section" class="snap-section reveal">
+  <div class="rsvp-left">
+    <span class="sec-label" style="color:rgba(245,240,230,.5);" data-va="La vostra resposta compta">Vuestra respuesta cuenta</span>
+    <h2 data-va="Ens <em>acompanyes</em>?">¿Nos <em>acompañas</em>?</h2>
+    <p data-va="Volem veure't allí. Però primer necessitem que ens ho confirmes 😄">Queremos verte ahí. Pero primero necesitamos que nos lo confirmes 😄</p>
+  </div>
+  <div class="rsvp-right">
+    <form class="rsvp-form" id="rsvpForm">
+      <div class="field"><label data-va="Com et dius? *">¿Cómo te llamas? *</label><input type="text" id="rf-nombre" name="nombre" required></div>
+      <div class="field">
+        <label data-va="Brindem junts el 29 d'agost? *">¿Brindamos juntos el 29 de agosto? 🥂 *</label>
+        <div class="pill-group">
+          <label><input type="radio" name="asistencia" value="Si, alli estare" required> <span data-va="Allí estaré amb tot! 🥂">¡Allí estaré con todo! 🥂</span></label>
+          <label><input type="radio" name="asistencia" value="No podre asistir"> <span data-va="Me ho perdré 😢">Me lo pierdo 😢</span></label>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field"><label data-va="Quants veniu?">¿Cuántos venís?</label><select id="rf-adultos" name="adultos"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+        <div class="field"><label data-va="I peques? (3-12 anys)">¿Y peques? (3-12 años)</label><select id="rf-ninos" name="ninos"><option>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+      </div>
+      <div class="field"><label data-va="Hi ha res que no pugues menjar?">¿Hay algo que no puedas comer?</label><input type="text" id="rf-alergias" name="alergias" placeholder="Pon Nada si no tienes ninguna" data-va-placeholder="Posa Res si no en tens"></div>
+      <div class="field"><label data-va="Si no sona esta cançó, per a què anar al casament? 😂">Si no suena esta canción, ¿para qué ir a la boda? 😂</label><input type="text" id="rf-cancion" name="cancion"></div>
+      <div class="field"><label data-va="Ens deixes unes paraules? 💌">¿Nos dejas unas palabras? 💌</label><textarea id="rf-mensaje" name="mensaje"></textarea></div>
+      <button type="submit" class="submit-btn" id="rsvpSubmit" data-va="Enviar resposta">Enviar respuesta</button>
+      <p id="rsvp-status"></p>
+    </form>
+  </div>
+</section>
+
+
+
+<section id="faq" class="snap-section reveal">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="sec-label" data-va="Tot el que necessiteu saber">Todo lo que necesitas saber</span>
+      <h2 style="font-size:clamp(36px,5vw,64px);line-height:1.1;" data-va="Preguntes <em>frequents</em>">Preguntas <em>frecuentes</em></h2>
+    </div>
+    <div class="faq-item"><button class="faq-q"><span class="fq-idx">01</span><span class="fq-txt" data-va="Com ens arreglem?">¿Cómo nos arreglamos?</span><span class="fq-plus">+</span></button><div class="faq-a"><p data-va="Boda informal! Vine guapo/a però còmode/a. I no t'oblides el banyador, les xancletes i la tovallola — que la piscina us espera! L'únic imprescindible és vindre amb ganes de passar-ho bé. 🏊😎">Boda informal, así que venid guapos pero cómodos. Y muy importante: traed bañador, chanclas y toalla — ¡que la piscina os espera! Lo único imprescindible es venir con ganas de pasarlo bien. 🏊😎</p></div></div>
+    <div class="faq-item"><button class="faq-q"><span class="fq-idx">02</span><span class="fq-txt" data-va="Com arribar a Hort de Ribera? 📍">¿Cómo llegar a Hort de Ribera? 📍</span><span class="fq-plus">+</span></button><div class="faq-a"><p data-va="Hort de Ribera, Carcaixent (València). A 40 minuts de València i 10 minuts d'Alzira. <br><br><a href='https://share.google/SguCQzcYO2FXxjUaX' target='_blank' rel='noopener' style='color:var(--clay);border-bottom:1px solid var(--clay);'>👉 Abrir en Google Maps</a>">Hort de Ribera, Carcaixent (Valencia). A 40 minutos de Valencia y 10 minutos de Alzira.<br><br><a href='https://share.google/SguCQzcYO2FXxjUaX' target='_blank' rel='noopener' style='color:var(--clay);border-bottom:1px solid var(--clay);'>👉 Abrir en Google Maps</a></p></div></div>
+  </div>
+</section>
+
+<footer>
+  <h2 data-va="Gracies">Gracias</h2>
+  <div style="margin-bottom:40px;font-size:14px;letter-spacing:.5px;">
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;opacity:.5;margin-bottom:20px;" data-va="Contacte">Contacto</p>
+    <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:+34618140694" style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--sand);transition:.3s;" onmouseover="this.style.color='var(--clay)'" onmouseout="this.style.color='var(--sand)'">
+        <span style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;">Andreu</span>
+        <span style="font-size:13px;letter-spacing:2px;opacity:.7;">618 14 06 94</span>
+      </a>
+      <div style="width:1px;background:rgba(245,240,230,.15);"></div>
+      <a href="tel:+34630737606" style="display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--sand);transition:.3s;" onmouseover="this.style.color='var(--clay)'" onmouseout="this.style.color='var(--sand)'">
+        <span style="font-family:'Playfair Display',serif;font-size:18px;font-style:italic;">Núria</span>
+        <span style="font-size:13px;letter-spacing:2px;opacity:.7;">630 73 76 06</span>
+      </a>
+    </div>
+  </div>
+  <p class="footer-note" data-va="29 · 08 · 2026 — Hort de Ribera, Carcaixent · Valencia">29 · 08 · 2026 — Hort de Ribera, Carcaixent · Valencia</p>
+</footer>
+
+</div><!-- #scroll-container -->
+
+<script>
+  const sc = document.getElementById('scroll-container');
+  const prog = document.getElementById('prog');
+  const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  /* SCROLL PROGRESS + NAV solid */
+  sc.addEventListener('scroll', () => {
+    prog.style.width = (sc.scrollTop / (sc.scrollHeight - sc.clientHeight) * 100) + '%';
+    navbar.classList.toggle('solid', sc.scrollTop > 60);
+  });
+
+  /* NAV smooth scroll */
+  navToggle.addEventListener('click', () => { navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    navToggle.classList.remove('open'); navLinks.classList.remove('open');
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { sc.scrollTo({ top: target.offsetTop, behavior: 'smooth' }); }
+  }));
+
+  /* SNAP SECTION fade-in observer */
+  const snapObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in-view', 'visible');
+      }
+    });
+  }, { root: sc, threshold: 0.3 });
+  document.querySelectorAll('.snap-section').forEach(s => snapObs.observe(s));
+
+  /* PARALLAX on hero bg */
+  sc.addEventListener('scroll', () => {
+    const hero = document.getElementById('hero');
+    const heroLeft = hero.querySelector('.hero-left');
+    const heroRight = hero.querySelector('.hero-right');
+    const offset = sc.scrollTop * 0.3;
+    if (heroLeft) heroLeft.style.transform = `translateY(${offset}px)`;
+    if (heroRight) heroRight.style.transform = `translateY(${offset * 0.5}px)`;
+  });
+
+  /* COUNTDOWN */
+  const wd = new Date('2026-08-29T12:00:00+02:00').getTime();
+  function tick() { let d = Math.max(0, wd - Date.now()); document.getElementById('cd-days').textContent = String(Math.floor(d / 86400000)).padStart(3, '0'); document.getElementById('cd-hours').textContent = String(Math.floor(d / 3600000) % 24).padStart(2, '0'); document.getElementById('cd-mins').textContent = String(Math.floor(d / 60000) % 60).padStart(2, '0'); document.getElementById('cd-secs').textContent = String(Math.floor(d / 1000) % 60).padStart(2, '0'); }
+  tick(); setInterval(tick, 1000);
+
+  /* FAQ */
+  document.querySelectorAll('.faq-q').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
+
+  /* LANGUAGE */
+  let lang = 'es';
+  const STATUS = { es: { ok: '¡Apuntado/a! Tu silla, tu copa y tu trozo de tarta están reservados 🥂', err: 'Algo no ha funcionado. Vuelve a intentarlo.' }, va: { ok: 'Apuntat/da! La teua cadira, la teua copa i el teu tros de pastís estan reservats 🥂', err: 'Alguna cosa no ha funcionat. Torna-ho a provar.' } };
+  const BTN = { es: { idle: 'Enviar respuesta', sending: 'Enviando...' }, va: { idle: 'Enviar resposta', sending: 'Enviant...' } };
+  function setLang(l) { document.querySelectorAll('[data-va]').forEach(el => { if (!el.dataset.es) el.dataset.es = el.innerHTML; el.innerHTML = l === 'va' ? el.dataset.va : el.dataset.es; }); document.querySelectorAll('[data-va-placeholder]').forEach(el => { if (!el.dataset.esPlaceholder) el.dataset.esPlaceholder = el.placeholder; el.placeholder = l === 'va' ? el.dataset.vaPlaceholder : el.dataset.esPlaceholder; }); document.querySelectorAll('.lang-bar button').forEach(b => b.classList.toggle('active', b.dataset.lang === l)); document.documentElement.lang = l; lang = l; }
+  document.querySelectorAll('.lang-bar button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+  /* RSVP */
+  const FORM_CONFIG = { actionUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdodKV-avRjd2CXTxwyOABEqa79_RNRCnDX5ut9XCMN6Q-0JQ/formResponse', fields: { nombre: 'entry.336439767', asistencia: 'entry.150869324', adultos: 'entry.96438272', ninos: 'entry.680529059', alergias: 'entry.1150858709', cancion: 'entry.1422308380', mensaje: 'entry.1122417683' } };
+  const rsvpForm = document.getElementById('rsvpForm');
+  const rsvpStatus = document.getElementById('rsvp-status');
+  const rsvpSubmit = document.getElementById('rsvpSubmit');
+  rsvpForm.addEventListener('submit', e => { e.preventDefault(); const fd = new FormData(); Object.entries(FORM_CONFIG.fields).forEach(([k, v]) => fd.append(v, rsvpForm[k]?.value || '')); rsvpSubmit.disabled = true; rsvpSubmit.textContent = BTN[lang].sending; fetch(FORM_CONFIG.actionUrl, { method: 'POST', mode: 'no-cors', body: fd }).then(() => { rsvpStatus.textContent = STATUS[lang].ok; rsvpStatus.className = 'show ok'; rsvpForm.reset(); }).catch(() => { rsvpStatus.textContent = STATUS[lang].err; rsvpStatus.className = 'show err'; }).finally(() => { rsvpSubmit.disabled = false; rsvpSubmit.textContent = BTN[lang].idle; }); });
+</script>
+</body>
+</html>
